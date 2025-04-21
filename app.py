@@ -211,7 +211,7 @@ ax.tick_params(axis='y', colors='white')
 # Clean up chart
 ax.set_title('')
 ax.spines[['top', 'right', 'left']].set_visible(False)
-plt.xticks(rotation=45, ha='right')
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right')
 plt.tight_layout()
 
 # Show chart
