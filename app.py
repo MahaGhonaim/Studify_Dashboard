@@ -73,7 +73,7 @@ st.markdown(
 
 @st.cache_data
 def load_data():
-    excel_file = "/content/UdemyDWH.xlsx"
+    excel_file = "UdemyDWH.xlsx"
     df_courses = pd.read_excel(excel_file, sheet_name='DimCourses')
     df_enrollments = pd.read_excel(excel_file, sheet_name='FactEnrollment')
     df_users = pd.read_excel(excel_file, sheet_name='DimUsers')
@@ -107,7 +107,7 @@ def get_image_base64(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-encoded_image = get_image_base64("/content/studify00.png")
+encoded_image = get_image_base64("studify00.png")
 st.sidebar.markdown(logo_html.format(encoded_image), unsafe_allow_html=True)
 st.sidebar.header("🎛️ Filters")
 
